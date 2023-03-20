@@ -1,0 +1,51 @@
+.footer {
+  padding-bottom: 2rem;
+
+  /* top section of footer */
+  .topSection {
+    max-width: 80ch;
+    margin: 0 auto;
+    padding-inline: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    /* 601px = 37.5625em */
+    @media (min-width: 37.5625em) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  /* logo image */
+  .topSection :nth-child(1) {
+    margin: 0 auto;
+  }
+
+  /* paragraph text content */
+  .topSection :nth-child(2) {
+    font-size: clamp(0.9375rem, 0.9125rem + 0.125vw, 1.0625rem);
+    margin: 1rem 0 0;
+  }
+
+  /* bottom section of footer */
+  .bottomSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2.3vw;
+    font-size: 0.875rem;
+    margin-top: 2rem;
+  }
+
+  /* social media icons list */
+  .bottomSection ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1rem;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px solid #eee;
+  }
+}
