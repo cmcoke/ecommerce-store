@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from './Header';
 
 export default function Layout({ title, description, keyword, children }) {
   return (
@@ -15,7 +16,7 @@ export default function Layout({ title, description, keyword, children }) {
 
       <div className='layout'>
 
-        <p>header</p>
+        <Header />
 
         <main>
           {children}
