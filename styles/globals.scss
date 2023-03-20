@@ -1,0 +1,98 @@
+:root {
+  --color-black: #1d1d1d;
+  --color-gray: #8b8b8b;
+  --color-blue: #eaf0f4;
+  --color-brown: #f9f3eb;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Setting 'font-size: 100% 'will make the text 100% of the base font size set in the browser. */
+html {
+  font-size: 100%;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Remove the underline for links */
+a {
+  text-decoration: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Fit an image in CSS grid */
+.image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Change the background color and text color of a text content when it is highlighted */
+::selection {
+  color: #fff;
+  background: var(--color-black);
+}
+
+/* Keeps the footer section at the bottom of the page regardless of the amount of content in the main section */
+.layout {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
